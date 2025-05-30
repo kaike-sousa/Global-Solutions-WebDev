@@ -12,3 +12,40 @@ function menuShow() {
 // FIM DO HEADER
 
 
+// INICIO CARROSEL
+    const track = document.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    const nextButton = document.querySelector('.carousel-button.right');
+    const prevButton = document.querySelector('.carousel-button.left');
+    const nav = document.querySelector('.carousel-nav');
+    const dots = Array.from(nav.children);
+
+    let currentIndex = 0;
+
+    function updateSlide(position) {
+    track.style.transform = 'translateX(-' + (100 * position) + '%)';
+    slides.forEach((slide, index) =>
+        slide.classList.toggle('current-slide', index === position)
+    );
+    dots.forEach((dot, index) =>
+        dot.classList.toggle('current-slide', index === position)
+    );
+    }
+
+    nextButton.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateSlide(currentIndex);
+    });
+
+    prevButton.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateSlide(currentIndex);
+    });
+
+    dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        currentIndex = index;
+        updateSlide(index);
+    });
+    });
+// FIM CARROSEL
