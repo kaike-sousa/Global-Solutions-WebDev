@@ -70,3 +70,7 @@ function menuShow() {
     });
     });
 // FIM DA ANIMAÇÃO
+
+    function mudarCor(cor) {
+        document.body.style.backgroundColor = cor;
+    }
