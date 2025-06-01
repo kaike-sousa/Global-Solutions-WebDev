@@ -453,3 +453,57 @@ strong {
         margin-bottom: 10px;
     }
 }
+
+/* OBJETIVOS */
+/* METADE TEXTO / METADE FOTO */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 20px 1vh;
+}
+
+.paragrafo {
+    width: 50%;
+    box-sizing: border-box;
+    font-size: 2.1rem;
+    text-align: justify;
+    margin: 0rem 2rem 4rem;
+}
+
+.imagemIlustrativa {
+    width: 30%;  
+    box-sizing: border-box;
+    margin: 0 1rem 1rem 0;
+}
+
+.imagemIlustrativa img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    .paragrafo {
+        width: 100%;
+        font-size: 1.4rem;
+        margin: 0 0 1.5rem 0;
+    }
+
+    .imagemIlustrativa {
+        width: 100%;
+        margin: 0 0 1rem 0;
+    }
+}
