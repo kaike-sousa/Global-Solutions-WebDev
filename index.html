@@ -33,6 +33,7 @@
                     <li class="nav-item"><a href="#publicoalvo" class="nav-link">Público-alvo</a></li>
                     <li class="nav-item"><a href="#beneficios" class="nav-link">Benefícios</a></li>
                     <li class="nav-item"><a href="#aplicacao" class="nav-link">Aplicação</a></li>
+                    <li class="nav-item"><a href="#quiz" class="nav-link">Quiz</a></li>
                 </ul>
             </div>
 
@@ -270,6 +271,7 @@
                     </li>
                 </ul>
             </div>
+        </section>
 
 
         <!-- Seção de aplicação -->
@@ -307,12 +309,74 @@
                 </ul>
             </div>
         </section>
-    </main>
 
+        <div class="titulo reveal">
+                <h1 id="quiz">Quiz</h1>
+        </div>
+        <section class="quiz-container">
+            <div class="pergunta">
+                <p>1. Qual é a principal causa natural de enchentes?</p>
+                <label><input type="radio" name="q1" value="a"> Vento forte</label>
+                <label><input type="radio" name="q1" value="b"> Terremotos</label>
+                <label><input type="radio" name="q1" value="c"> Excesso de chuva</label>
+
+                <p>2. Onde as enchentes urbanas são mais comuns?</p>
+                <label><input type="radio" name="q2" value="a"> Regiões urbanas mal planejadas</label>
+                <label><input type="radio" name="q2" value="b"> Florestas tropicais</label>
+                <label><input type="radio" name="q2" value="c"> Áreas desérticas</label>
+
+                <p>3. Qual fator agrava as enchentes nas cidades?</p>
+                <label><input type="radio" name="q3" value="a"> Presença de parques</label>
+                <label><input type="radio" name="q3" value="b"> Entupimento de bueiros</label>
+                <label><input type="radio" name="q3" value="c"> Solo arenoso</label>
+
+                <p>4. Qual é um dos principais riscos à saúde após uma enchente?</p>
+                <label><input type="radio" name="q4" value="a"> Fraturas ósseas</label>
+                <label><input type="radio" name="q4" value="b"> Insolação</label>
+                <label><input type="radio" name="q4" value="c"> Doenças de veiculação hídrica</label>
+
+                <p>5. Qual é a função do sistema de drenagem urbana?</p>
+                <label><input type="radio" name="q5" value="a"> Fornecer energia elétrica</label>
+                <label><input type="radio" name="q5" value="b"> Escoar a água da chuva</label>
+                <label><input type="radio" name="q5" value="c"> Controlar o trânsito</label>
+
+                <p>6. O desmatamento contribui para enchentes por quê?</p>
+                <label><input type="radio" name="q6" value="a"> Diminui a absorção de água pelo solo</label>
+                <label><input type="radio" name="q6" value="b"> Aumenta o consumo de energia</label>
+                <label><input type="radio" name="q6" value="c"> Melhora o escoamento</label>
+
+                <p>7. Qual órgão normalmente atua em situações de enchentes?</p>
+                <label><input type="radio" name="q7" value="a"> Banco Central</label>
+                <label><input type="radio" name="q7" value="b"> Ministério da Agricultura</label>
+                <label><input type="radio" name="q7" value="c"> Defesa Civil</label>
+
+                <p>8. Qual país enfrenta enchentes frequentes em grandes cidades como São Paulo e Recife?</p>
+                <label><input type="radio" name="q8" value="a"> Canadá</label>
+                <label><input type="radio" name="q8" value="b"> Brasil</label>
+                <label><input type="radio" name="q8" value="c"> Suécia</label>
+
+                <p>9. Qual ação ajuda na prevenção de enchentes?</p>
+                <label><input type="radio" name="q9" value="a"> Queimada de lixo</label>
+                <label><input type="radio" name="q9" value="b"> Construção em encostas</label>
+                <label><input type="radio" name="q9" value="c"> Educação ambiental</label>
+
+                <p>10. O que pode orientar melhor o planejamento urbano contra enchentes?</p>
+                <label><input type="radio" name="q10" value="a"> Mapa de áreas de risco</label>
+                <label><input type="radio" name="q10" value="b"> Propaganda de produtos</label>
+                <label><input type="radio" name="q10" value="c"> Tamanho dos prédios</label>
+            </div>
+
+            <button type="button" onclick="verificarRespostas()">Enviar</button>
+            </form>
+
+            <p id="resultadoQuiz"></p>
+        </section>
+    </main>
+    </body>
     <!-- Rodapé -->
     <footer class="rodape">
         <p>&copy; 2025 Prever+. Todos os direitos reservados.</p>
     </footer>
-    
+
     <script src="src/js/script.js"></script>
 </html>

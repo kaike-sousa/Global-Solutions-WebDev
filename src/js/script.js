@@ -71,6 +71,37 @@ function menuShow() {
     });
 // FIM DA ANIMAÇÃO
 
+// Mudança de cor
     function mudarCor(cor) {
         document.body.style.backgroundColor = cor;
     }
+// fim da mudança
+
+// QUIZ DE 10 PERGUNTAS
+    function verificarRespostas() {
+    const respostas = {
+        q1: "c",
+        q2: "a",
+        q3: "b",
+        q4: "c",
+        q5: "b",
+        q6: "a",
+        q7: "c",
+        q8: "b",
+        q9: "c",
+        q10: "a"
+    };
+
+    let pontos = 0;
+
+    for (let i = 1; i <= 10; i++) {
+        const resposta = document.querySelector(`input[name="q${i}"]:checked`);
+        if (resposta && resposta.value === respostas[`q${i}`]) {
+        pontos++;
+        }
+    }
+
+    const resultado = document.getElementById("resultadoQuiz");
+    resultado.innerText = `Você acertou ${pontos} de 10 perguntas.`;
+    }
+
